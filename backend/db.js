@@ -15,18 +15,21 @@ const dbConnection = async()=>{
 
 const userSchema = new mongoose.Schema({
     firstName :{
-        type:String
+        type:String,
+        minLength :4
     },
     lastName :{
         type:String
     },
     email :{
         type:String,
-        required:true
+        required:true,
+        
     },
     password :{
         type:String,
-        required:true
+        required:true,
+        minLength:6
     },
 })
 
